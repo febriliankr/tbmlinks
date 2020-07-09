@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Portal TBM &mdash; Access Links</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="text-center text-light">
+      <div class="card-body">
+        <h1 class="card-title">Portal TBM</h1>
+        <p class="card-text">Welcome to Portal TBM. Here you can easily search by Bidang, File Name, or Url, or go <a href="#add_link">insert your own.</a></p>
+      </div>
+      <form class="search">
+        <input class="form-control m-auto" type="text" name="search" placeholder="Search" />
+      </form>
+    </header>
+
+    <ul class="list-group todos mx-auto text-light">
+    </ul>
+
+    <div class="success-message"></div>
+
+    <a id="add_link">
+    <form class="add hidden text-center my-4">
+      <label class="text-light">Add a new link...</label>
+      <div class="py-1"><input class="nama_bidang form-control m-auto" type="text" name="add" placeholder="Bidang"/></div>
+      <div class="py-1"><input class="nama_link form-control m-auto" type="text" placeholder="Nama Link"/></div>
+      <div class="py-1"><input class="nama_url form-control m-auto" type="text" placeholder="URL"/></div>
+      <div class="py-1">
+      <input class="nama_tag form-control m-auto" type="text" placeholder="tag"/>
+      </div>
+      <div class="py-3"><button type="button" class="submit_form btn btn-light">Submit</button></div>
+    
+      <div class="card text-white bg-dark mb-3 text-justify">  
+        <div class="card-body">
+          <h5 class="card-title">Type In</h5>
+          <p class="card-text">Type in your Bidang, Nama Link, and the url to insert it to the database. The Bidang, Nama Link, and url will be searchable.</p>
+        </div>
+      </div>
+    </form>
+
+    <div class = "py-3">
+      <label for="inputPassword5" class="text-light">Gain Access</label>
+      <input class="admin-password form-control m-auto" type="password" name="add" placeholder="Enter Password"/>
+      <small id="passwordHelpBlock" class="form-text text-muted">
+        Ask administrator for password access. You can contact Dholi/Febri.
+      </small>
+    
+    </div>
+
+    <div class="text-light my-4 text-center">
+      <h6 class="card-title">About</h6>
+      <p class="card-text">Providing a quicker way to browse through links, nama bidang, or tags.</p>
+      <p class="card-text"><small>Developed by Febrilian Kristiawan, FKUI 2017 &copy; 2020</small></p>
+    </div>
+
+
+
+  </div>
+  <!--end of container div-->
+
+  
+  
+
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+<script src="app.js"></script>
+
+
+</body>
+</html>
